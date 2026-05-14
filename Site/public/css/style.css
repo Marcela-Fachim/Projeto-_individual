@@ -76,7 +76,7 @@ a{
 }
 
 .hero-imagem{
-    background-image: url("female-hiker-with-backpack-taking-break-high-hill.jpg");
+    background-image: url("../assets/imagens/female-hiker-with-backpack-taking-break-high-hill.jpg");
     height: 45vh;
     background-position: center;
     background-size: cover;
@@ -87,7 +87,7 @@ a{
 }
 
 .hero-imagem-agencias{
-    background-image: url("high-angle-passport-compass-laptop.jpg");
+    background-image: url("../assets/imagens/high-angle-passport-compass-laptop.jpg");
     height: 45vh;
     background-position: center;
     background-size: cover;
@@ -398,162 +398,5 @@ body, html {
 .pagina-sobre .imagem-historia img{
     width: 550px;
     border-radius: 20px;
-}
-
-body-quiz{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f7f4f4;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-#pontuacaoEJogo{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#btnIniciarQuiz{
-    background-color: #d78ac7;
-    color: white;
-    border: none;
-    padding: 12px 28px;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#btnIniciarQuiz:hover{
-    background-color: #c970b6;
-    display: block;
-}
-
-#jogo{
-    width: 420px;
-    background-color: white;
-    border-radius: 22px;
-    padding: 22px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-#infoQuestao{
-    color: #d78ac7;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-#spanQuestaoExibida{
-    font-size: 22px;
-    font-weight: bold;
-    color: #333;
-    line-height: 1.3;
-}
-
-#infoAlternativas{
-    color: #777;
-    font-size: 16px;
-}
-
-#opcoes{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.radio{
-    display: none;
-}
-
-.option{
-    display: block;
-    width: 90%;
-    padding: 14px;
-    border: 2px solid #efc4e6;
-    border-radius: 14px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
-    color: #444;
-    background-color: white;
-}
-
-.option:hover{
-    background-color: #d78ac7;
-    color: white;
-    border-color: #d78ac7;
-}
-
-.radio:checked + .option{
-    background-color: #d78ac7;
-    color: white;
-    border-color: #d78ac7;
-}
-
-#botoes{
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 10px;
-}
-
-#botoes button{
-    padding: 12px 18px;
-    border-radius: 14px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#btnSubmeter{
-    background-color: #d78ac7;
-    color: white;
-    border: none;
-}
-
-#btnSubmeter:hover{
-    background-color: #c970b6;
-}
-
-#btnProx{
-    background-color: transparent;
-    border: 2px solid #efc4e6;
-    color: #d78ac7;
-}
-
-#btnProx:hover{
-    background-color: #fcecf8;
-}
-
-#btnTentarNovamente{
-    background-color: #ececec;
-    border: none;
-    color: #777;
-}
-
-button:disabled{
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-#pontuacao{
-    display: none !important;
-}
-
-#jogo,
-#pontuacao {
-    display: none;
 }
 
