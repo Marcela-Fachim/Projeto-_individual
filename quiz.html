@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<nav class="navbar">
+    <div class="logo">
+        LOGO
+    </div>
+    <ul class="menu">
+        <li>
+            <a href="home.html">Home</a>
+        </li>
+        <li>
+            <a href="posts.html">Posts</a>
+        </li>
+        <li>
+            <a href="agencias.html">Agências</a>
+        </li>
+        <li>
+            <a href="quiz.html" class="ativo">Quiz</a>
+        </li>
+        <li>
+            <a href="">Dashboard</a>
+        </li>
+        <li>
+            <a href="sobre nos.html">Sobre nós</a>
+        </li>
+    </ul>
+</nav>
+<body-quiz onload="onloadEsconder()">
+    <div id="pontuacaoEJogo">
+        <div class="textoQuiz">
+            <h1>Cada resposta ajuda outras mulheres a explorarem o mundo com mais confiança</h1>
+            <h2>Compartilhe suas preferências e ajude outras mulheres a viajarem com mais segurança </h2>
+        </div>
+        <button id="btnIniciarQuiz" onclick="iniciarQuiz()">INICIAR QUIZ</button>
+
+        <div id="pontuacao" class="flex-colunar width-fit-content border-primary">
+            <div id="pontuacaoDuranteJogo" class="flex-colunar padding-8">
+                <span class="width-fit-content">Quantidade de acertos: <span id="spanCertas"></span></span>
+                <span class="width-fit-content">Quantidade de erros: <span id="spanErradas"></span></span>
+            </div>
+            <div id="pontuacaoFinalJogo" class="flex-colunar padding-8">
+                <span id="pontuacaoFinal" class="width-fit-content">Pontuação Final:
+                    <span id="spanPontuacaoFinal">***</span>
+                </span>
+                <span id="msgFinal" class="width-fit-content">***</span>
+            </div>
+        </div>
+
+        <div id="jogo" class="width-fit-content flex-colunar border-secondary">
+
+            <div id="infoQuestao" class="padding-8">
+                <span>Questão atual: <span id="spanNumeroDaQuestaoAtual"></span> de <span id="qtdQuestoes"></span>
+                    questões.</span>
+            </div>
+
+            <div id="perguntaDaQuestaoAtual" class="padding-8">
+                <span id="spanQuestaoExibida" class="text-bold"></span>
+            </div>
+
+            <div id="infoAlternativas" class="padding-8">
+                <span><em>Escolha uma opção dentre as abaixo:</em></span>
+            </div>
+
+            <div id="opcoes" class="flex-colunar padding-8">
+                <span>
+                    <input type="radio" id="primeiraOpcao" name="option" class="radio" value="alternativaA" />
+                    <label for="primeiraOpcao" class="option" id="labelOpcaoUm"></label>
+                </span>
+                <span>
+                    <input type="radio" id="segundaOpcao" name="option" class="radio" value="alternativaB" />
+                    <label for="segundaOpcao" class="option" id="labelOpcaoDois"></label>
+                </span>
+                <span>
+                    <input type="radio" id="terceiraOpcao" name="option" class="radio" value="alternativaC" />
+                    <label for="terceiraOpcao" class="option" id="labelOpcaoTres"></label>
+                </span>
+                <span>
+                    <input type="radio" id="quartaOpcao" name="option" class="radio" value="alternativaD" />
+                    <label for="quartaOpcao" class="option" id="labelOpcaoQuatro"></label>
+                </span>
+            </div>
+
+            <div id="botoes" class="flex-colunar padding-8">
+                <button onclick="submeter()" id="btnSubmeter">Submeter resposta</button>
+                <button onclick="avancar()" id="btnProx" disabled>Avançar para próxima questão</button>
+                <!-- <button onclick="finalizar()" id="btnConcluir" disabled>Finalizar Quiz</button> -->
+                <button onclick="tentarNovamente()" id="btnTentarNovamente" disabled>Tentar novamente</button>
+            </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
+<script>
+    const listaDeQuestoes = [
+
+        {
+            pergunta: "Qual tipo de destino mais combina com você?",
+            alternativaA: "Praia e calor",
+            alternativaB: "Cidade grande",
+            alternativaC: "Natureza e montanhas",
+            alternativaD: "Lugares históricos/culturais"
+        },
+
+        {
+            pergunta: "Qual seria sua viagem ideal?",
+            alternativaA: "Relaxar e descansar",
+            alternativaB: "Conhecer novas culturas",
+            alternativaC: "Aventura e experiências radicais",
+            alternativaD: "Fazer compras e explorar a cidade"
+        },
+
+        {
+            pergunta: "Você prefere viajar:",
+            alternativaA: "Sozinha",
+            alternativaB: "Com amigas",
+            alternativaC: "Em grupo",
+            alternativaD: "Tanto faz"
+        },
+
+        {
+            pergunta: "Em qual período você costuma viajar mais?",
+            alternativaA: "Férias",
+            alternativaB: "Feriados",
+            alternativaC: "Fins de semana",
+            alternativaD: "Qualquer oportunidade livre"
+        },
+
+        {
+            pergunta: "Como você organiza seu orçamento de viagem?",
+            alternativaA: "Planejo tudo com antecedência",
+            alternativaB: "Defino apenas um limite de gastos",
+            alternativaC: "Gasto mais com experiências",
+            alternativaD: "Vou decidindo durante a viagem"
+        },
+
+        {
+            pergunta: "O que não pode faltar em uma viagem?",
+            alternativaA: "Segurança",
+            alternativaB: "Conforto",
+            alternativaC: "Economia",
+            alternativaD: "Liberdade para explorar"
+        },
+
+        {
+            pergunta: "Você prefere viajar:",
+            alternativaA: "Pelo Brasil",
+            alternativaB: "Para o exterior",
+            alternativaC: "Ambos igualmente",
+            alternativaD: "Depende da oportunidade"
+        },
+
+        {
+            pergunta: "O que mais influencia sua escolha de destino?",
+            alternativaA: "Redes sociais",
+            alternativaB: "Recomendações de outras pessoas",
+            alternativaC: "Segurança do local",
+            alternativaD: "Preço da viagem"
+        },
+
+        {
+            pergunta: "Antes de viajar, você costuma:",
+            alternativaA: "Pesquisar tudo detalhadamente",
+            alternativaB: "Fazer um roteiro básico",
+            alternativaC: "Decidir tudo na hora",
+            alternativaD: "Buscar relatos de outras viajantes"
+        },
+
+        {
+            pergunta: "Qual frase combina mais com você?",
+            alternativaA: "Viajar é meu momento de paz.",
+            alternativaB: "Quero conhecer o mundo inteiro.",
+            alternativaC: "A melhor parte é compartilhar experiências.",
+            alternativaD: "Cada viagem é uma nova descoberta."
+        },
+    ]
+
+    // variáveis globais    
+    let numeroDaQuestaoAtual = 0
+    let quantidadeDeQuestoes = listaDeQuestoes.length
+    let respostasUsuario = []
+    // let isUltima = numeroDaQuestaoAtual == quantidadeDeQuestoes-1 ? true : false
+
+    function onloadEsconder() {
+        document.getElementById('pontuacao').style.display = "none"
+        document.getElementById('jogo').style.display = "none"
+    }
+
+    function iniciarQuiz() {
+        document.getElementById('pontuacao').style.display = "flex"
+        document.getElementById('jogo').style.display = "flex"
+        document.getElementById('btnIniciarQuiz').style.display = "none"
+
+        document.getElementById('qtdQuestoes').innerHTML = quantidadeDeQuestoes
+
+        preencherHTMLcomQuestaoAtual(0)
+
+        btnSubmeter.disabled = false
+        btnProx.disabled = true
+        // btnConcluir.disabled = true
+        btnTentarNovamente.disabled = true
+    }
+
+    function preencherHTMLcomQuestaoAtual(index) {
+        habilitarAlternativas(true)
+        const questaoAtual = listaDeQuestoes[index]
+        numeroDaQuestaoAtual = index
+        console.log("questaoAtual")
+        console.log(questaoAtual)
+        document.getElementById("spanNumeroDaQuestaoAtual").innerHTML = Number(index) + 1 // ajustando porque o index começa em 0
+        document.getElementById("spanQuestaoExibida").innerHTML = questaoAtual.pergunta;
+        document.getElementById("labelOpcaoUm").innerHTML = questaoAtual.alternativaA;
+        document.getElementById("labelOpcaoDois").innerHTML = questaoAtual.alternativaB;
+        document.getElementById("labelOpcaoTres").innerHTML = questaoAtual.alternativaC;
+        document.getElementById("labelOpcaoQuatro").innerHTML = questaoAtual.alternativaD;
+    }
+
+    function submeter() {
+
+        const options = document.getElementsByName("option")
+
+        let respostaSelecionada = null
+
+        for (let i = 0; i < options.length; i++) {
+
+            if (options[i].checked) {
+                respostaSelecionada = options[i].value
+                break
+            }
+        }
+
+        if (respostaSelecionada == null) {
+
+            alert("Escolha uma opção!")
+
+        } else {
+
+            respostasUsuario.push({
+                pergunta: listaDeQuestoes[numeroDaQuestaoAtual].pergunta,
+                resposta: respostaSelecionada
+            })
+
+            btnSubmeter.disabled = true
+            btnProx.disabled = false
+
+            habilitarAlternativas(false)
+        }
+    }
+
+    function habilitarAlternativas(trueOrFalse) {
+        let opcaoEscolhida = trueOrFalse ? false : true
+
+        primeiraOpcao.disabled = opcaoEscolhida
+        segundaOpcao.disabled = opcaoEscolhida
+        terceiraOpcao.disabled = opcaoEscolhida
+        quartaOpcao.disabled = opcaoEscolhida
+
+    }
+
+    function avancar() {
+
+        btnProx.disabled = true
+        btnSubmeter.disabled = false
+
+        desmarcarRadioButtons()
+
+        if (numeroDaQuestaoAtual < quantidadeDeQuestoes - 1) {
+
+            numeroDaQuestaoAtual++
+            preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual)
+
+        } else {
+
+            finalizarJogo()
+        }
+    }
+
+    function tentarNovamente() {
+        // atualiza a página
+        window.location.reload()
+    }
+
+    function desmarcarRadioButtons() {
+        const options = document.getElementsByName("option");
+        for (let i = 0; i < options.length; i++) {
+            options[i].checked = false;
+        }
+    }
+
+    function finalizarJogo() {
+        document.getElementById("jogo").innerHTML = `
+        <div style="padding:20px; text-align:center;">
+            <h2>Quiz finalizado</h2>
+            <p>Obrigada por compartilhar suas preferências de viagem!</p>
+            <a href="home.html"
+           style="
+           display:inline-block;
+           margin-top:20px;
+           padding:12px 24px;
+           background:#d78ac7;
+           color:white;
+           text-decoration:none;
+           border-radius:12px;
+           font-weight:bold;
+           ">
+           
+           Voltar para página inicial
+           
+        </a>
+
+        </div>`
+
+        console.log(respostasUsuario)
+
+    }
+</script>
