@@ -1,30 +1,30 @@
-.navbar{
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  padding: 25px 40px;
-  align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 25px 40px;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-a{
+a {
     color: rgb(209, 133, 189);
     text-decoration: none;
 }
 
-.menu{
+.menu {
     display: flex;
     list-style-type: none;
     gap: 30px;
     margin: 0 auto;
 }
 
-.ativo{
+.ativo {
     border-bottom: 2px solid rgb(209, 133, 189);
     padding-bottom: 5px;
 }
 
-.logo{
+.logo {
     height: 80px;
     width: 200px;
     border-radius: 100px;
@@ -33,18 +33,18 @@ a{
 
 }
 
-.img-logo{
+.img-logo {
     height: 80px;
     width: 200px;
     object-fit: cover;
 }
 
-.login{
+.login {
     display: flex;
     gap: 30px;
 }
 
-.btEntrar{
+.btEntrar {
     border: 1px solid rgb(177, 40, 140);
     border-radius: 20px;
     background-color: white;
@@ -53,11 +53,11 @@ a{
 }
 
 .btEntrar:hover {
-  background-color: rgb(209, 133, 189);
-  color: white;
+    background-color: rgb(209, 133, 189);
+    color: white;
 }
 
-.btLogin{   
+.btLogin {
     border: 1px solid rgb(177, 40, 140);
     border-radius: 20px;
     background-color: white;
@@ -66,8 +66,8 @@ a{
 }
 
 .btLogin:hover {
-  background-color: rgb(209, 133, 189); 
-  color: white;
+    background-color: rgb(209, 133, 189);
+    color: white;
 }
 
 .hidden {
@@ -75,7 +75,7 @@ a{
     pointer-events: none;
 }
 
-.hero-imagem{
+.hero-imagem {
     background-image: url("../assets/imagens/female-hiker-with-backpack-taking-break-high-hill.jpg");
     height: 45vh;
     background-position: center;
@@ -86,18 +86,19 @@ a{
     display: flex;
 }
 
-.hero-imagem-agencias{
+.hero-imagem-agencias {
     background-image: url("../assets/imagens/high-angle-passport-compass-laptop.jpg");
     height: 45vh;
     background-position: center;
     background-size: cover;
-    position:relative;
+    position: relative;
     align-items: center;
     padding: 80px 80px;
     display: flex;
 }
 
-body, html {
+body,
+html {
     height: 100%;
 }
 
@@ -108,14 +109,14 @@ body, html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.hero-texto h1{
+.hero-texto h1 {
     font-size: 48px;
     font-weight: bold;
     margin-bottom: 10px;
-    color:rgb(220, 167, 205);
+    color: rgb(220, 167, 205);
 }
 
-.hero-texto h2{
+.hero-texto h2 {
     font-size: 26px;
     color: #b6c1e3;
     margin-bottom: 2px;
@@ -128,12 +129,12 @@ body, html {
     line-height: 1.5;
 }
 
-.hero-botoes{
+.hero-botoes {
     display: flex;
     gap: 30px;
 }
 
-.btDestinos{
+.btDestinos {
     border: 1px solid rgb(177, 40, 140);
     border-radius: 20px;
     background-color: white;
@@ -141,12 +142,12 @@ body, html {
     transition-duration: 0.4s;
 }
 
-.btDestinos:hover{
+.btDestinos:hover {
     background-color: rgb(209, 133, 189);
     color: white;
 }
 
-.btPosts{
+.btPosts {
     border: 1px solid rgb(177, 40, 140);
     border-radius: 20px;
     background-color: white;
@@ -154,21 +155,21 @@ body, html {
     transition-duration: 0.4s;
 }
 
-.btPosts:hover{
+.btPosts:hover {
     background-color: rgb(209, 133, 189);
     color: white;
 }
 
-.card-texto{
+.card-texto {
     position: relative;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    color:rgb(209, 133, 189);
+    color: rgb(209, 133, 189);
     padding: 20px 80px;
     margin-top: 0;
 }
 
-.card-texto h2{
+.card-texto h2 {
     display: flex;
     align-items: left;
     font-size: 24px;
@@ -176,46 +177,46 @@ body, html {
     margin-bottom: 0px;
 }
 
-.card-texto h4{
+.card-texto h4 {
     display: flex;
     align-items: left;
     font-size: 18px;
     margin-top: 0;
 }
 
-.card-destino{
+.card-destino {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.card{
+.card {
     width: 28%;
     background-color: #eeeeee;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-.card img{
+.card img {
     width: 100%;
     height: 180px;
-    object-fit: cover; 
+    object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-.card h1{
+.card h1 {
     text-align: center;
     margin: 10px 0;
 }
 
-.card h4{
+.card h4 {
     font-size: 14px;
     padding: 0 15px;
 }
 
-.container{
+.container {
     max-width: 797px;
     margin: 50px auto;
     padding: 20px;
@@ -225,7 +226,7 @@ body, html {
     border-radius: 10px;
 }
 
-.login2{
+.login2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -233,21 +234,21 @@ body, html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.col-40{
+.col-40 {
     width: 40%;
     padding: 20px 40px;
 }
 
-.col-60{
+.col-60 {
     width: 60%;
     padding: 40px 20px;
 }
 
-.form-login h3{
+.form-login h3 {
     text-align: center;
 }
 
-.form-login input{
+.form-login input {
     width: 100%;
     border: none;
     outline: none;
@@ -256,20 +257,20 @@ body, html {
     margin-bottom: 20px;
 }
 
-.form-login button{
+.form-login button {
     border: 1px solid rgb(177, 40, 140);
     border-radius: 20px;
     background-color: white;
     padding: 8px 16px;
-    transition-duration: 0.4s;   
+    transition-duration: 0.4s;
 }
 
-.form-login button:hover{
-    background-color: rgb(209, 133, 189); 
+.form-login button:hover {
+    background-color: rgb(209, 133, 189);
     color: white;
 }
 
-.cadastro{
+.cadastro {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -277,11 +278,11 @@ body, html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.form-cadastro h3{
+.form-cadastro h3 {
     text-align: center;
 }
 
-.form-cadastro input{
+.form-cadastro input {
     width: 100%;
     border: none;
     outline: none;
@@ -290,37 +291,37 @@ body, html {
     margin-bottom: 20px;
 }
 
-.form-cadastro button{
+.form-cadastro button {
     border: 1px solid rgb(177, 40, 140);
     border-radius: 20px;
     background-color: white;
     padding: 8px 16px;
-    transition-duration: 0.4s;   
+    transition-duration: 0.4s;
 }
 
-.form-cadastro button:hover{
-    background-color: rgb(209, 133, 189); 
+.form-cadastro button:hover {
+    background-color: rgb(209, 133, 189);
     color: white;
 }
 
-.pagina-sobre{
+.pagina-sobre {
     margin: 0;
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.pagina-sobre .sobre{
+.pagina-sobre .sobre {
     padding: 80px 120px;
 }
 
-.pagina-sobre .titulo-sobre h1{
+.pagina-sobre .titulo-sobre h1 {
     font-size: 50px;
     font-weight: bold;
     margin-bottom: 10px;
     color: #b6c1e3;
 }
 
-.pagina-sobre .linha{
+.pagina-sobre .linha {
     width: 300px;
     height: 6px;
     background-color: rgb(209, 133, 189);
@@ -328,44 +329,44 @@ body, html {
     border-radius: 10px;
 }
 
-.pagina-sobre .conteudo-sobre{
+.pagina-sobre .conteudo-sobre {
     display: flex;
     align-items: center;
     gap: 80px;
     margin-bottom: 100px;
 }
 
-.pagina-sobre .imagem-sobre img{
+.pagina-sobre .imagem-sobre img {
     width: 550px;
     border-radius: 20px;
 }
 
-.pagina-sobre .texto-sobre{
+.pagina-sobre .texto-sobre {
     max-width: 600px;
 }
 
-.pagina-sobre .texto-sobre h2{
+.pagina-sobre .texto-sobre h2 {
     font-size: 30px;
     line-height: 1.3;
     margin-bottom: 20px;
 }
 
-.pagina-sobre .texto-sobre p{
+.pagina-sobre .texto-sobre p {
     font-size: 22px;
     line-height: 1.7;
     color: #444;
 }
 
-.pagina-sobre .texto-meio{
+.pagina-sobre .texto-meio {
     margin-bottom: 120px;
 }
 
-.pagina-sobre .texto-meio h2{
+.pagina-sobre .texto-meio h2 {
     font-size: 30px;
     margin-bottom: 20px;
 }
 
-.pagina-sobre .texto-meio p{
+.pagina-sobre .texto-meio p {
     font-size: 18px;
     line-height: 1.8;
     margin-bottom: 40px;
@@ -373,84 +374,127 @@ body, html {
     color: #444;
 }
 
-.pagina-sobre .conteudo-final{
+.pagina-sobre .conteudo-final {
     display: flex;
     align-items: center;
     gap: 80px;
 }
 
-.pagina-sobre .texto-fim{
+.pagina-sobre .texto-fim {
     max-width: 600px;
 }
 
-.pagina-sobre .texto-fim h2{
+.pagina-sobre .texto-fim h2 {
     font-size: 32px;
     line-height: 1.3;
     margin-bottom: 20px;
 }
 
-.pagina-sobre .texto-fim p{
+.pagina-sobre .texto-fim p {
     font-size: 18px;
     line-height: 1.7;
     color: #444;
 }
 
-.pagina-sobre .imagem-historia img{
+.pagina-sobre .imagem-historia img {
     width: 550px;
     border-radius: 20px;
 }
 
-.body-quiz{
-    margin:0 ;
+.body-quiz {
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 
 
 }
 
-    #btnIniciarQuiz{
-        border: 1px solid rgb(177, 40, 140);
-        border-radius: 20px;
-        background-color: white;
-        padding: 24px 48px;
-        transition-duration: 0.4s;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: large;
-    }
+#btnIniciarQuiz {
+    border: 1px solid rgb(177, 40, 140);
+    border-radius: 20px;
+    background-color: white;
+    padding: 24px 48px;
+    transition-duration: 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
 
-    #btnIniciarQuiz:hover{
-        background-color: rgb(209, 133, 189);
-        color: white;
-    }
+#btnIniciarQuiz:hover {
+    background-color: rgb(209, 133, 189);
+    color: white;
+}
 
-    #pontuacaoEJogo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 500px;
-    }
+#pontuacaoEJogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+}
 
-    #jogo{
-        border: 1px solid rgb(177, 40, 140);
-        padding: 24px;
-        justify-content: center;
-        align-items: flex-start;
-        font-size: 16px;
-        flex-direction: column;
-        gap: 20px;
-        display: flex;
-    }
+#jogo {
+    border: 1px solid rgb(177, 40, 140);
+    padding: 24px;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 16px;
+    flex-direction: column;
+    gap: 20px;
+    display: flex;
+    border-radius: 5%;
+}
 
-    #infoQuestao{
-        font-size: 14px;
-        color: rgb(209, 133, 189);
-        font-weight: 600;
-    }
-    
-    #opcoes{
-        flex-direction: column;
-    }
+#infoQuestao {
+    font-size: 14px;
+    color: rgb(209, 133, 189);
+    font-weight: 600;
+    border-bottom: 1px solid rgb(209, 133, 189);
+    padding-bottom: 10px;
+}
 
-    
+#perguntaDaQuestaoAtual {
+    font-size: 20px;
+    font-weight: 600;
+    flex-direction: column;
+}
 
+#opcoes {
+    flex-direction: column;
+    background: white;
+    font-weight: 500;
+    width: 90%;
+    border: 1px solid rgb(209, 133, 189);
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+
+botoes-quiz{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+
+#btnSubmeter, #btnProx, #btnTentarNovamente{
+    border: 1px solid rgb(177, 40, 140);
+    border-radius: 20px;
+    background-color: white;
+    padding: 12px 24px;
+    transition-duration: 0.4s;
+}
+
+#btnSubmeter:hover, #btnProx:hover, #btnTentarNovamente:hover {
+    background-color: rgb(209, 133, 189);
+    color: white;
+}
+
+.flex-colunar{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
